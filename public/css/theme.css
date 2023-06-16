@@ -1,0 +1,65 @@
+/** UTILITIES **/
+.hidden{
+    display: none;
+}
+html,body{
+    min-height: 100vh;
+}
+body{
+    background-color: #eee;
+}
+
+/** BOOTSTRAP ADJUSTMENTS **/
+.container{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-left: 0;
+    padding-right: 0;
+    border: 1px solid #ddd;
+}
+.form-group{
+    margin-bottom: 1em;
+}
+main,header,footer{
+    padding: 1em;
+}
+main{
+    flex-grow: 1;
+}
+header{
+    background-color: #333;
+    color: #fff;
+}
+footer{
+    background-color: #fef;
+}
+
+nav a{
+    color: #ccc;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: .5em;
+}
+nav a:hover, nav a.active{
+    color: #fff;
+}
+
+.content_section,.thread{
+    display: block;
+}
+
+.content_section + .content_section,.thread + .thread{
+    margin-top: 2em;
+    padding-top: 2em;
+    border-top: 1px solid #ccc;
+}
+dd + dt{
+    margin-top: 1em;
+}
+
+.body__issue_overview .card{
+    display: inline-flex;
+    margin-right: 1em;
+}
