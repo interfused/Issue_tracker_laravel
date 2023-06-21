@@ -2,7 +2,7 @@
 @section('title', 'Login')
 
 @section('footerScripts')
-    <script src="./js/registerUser.js"></script>
+    <script src="{{ asset('js/registerUser.js') }}"></script>
 @endsection
 
 @section('content')
@@ -24,7 +24,7 @@
             $mappings[] = ['label' => 'Last Name', 'inputName' => 'name_last'];
             $mappings[] = ['label' => 'Email', 'inputName' => 'email'];
             $mappings[] = ['label' => 'Phone', 'inputName' => 'phone'];
-
+            
             foreach ($mappings as $el) {
                 echo '<div class="form-group">';
                 echo '<label for="' . $el['inputName'] . '">' . $el['label'] . '</label>';
