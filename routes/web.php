@@ -23,17 +23,17 @@ Route::get('/', [WelcomeController::class, 'getItem']);
 
 
 //various users
-Route::get('/registerUser', [UserController::class, 'getRegistrationForm']);
+Route::get('/registerUser', [UserController::class, 'getRegistrationForm'])->name('getRegisterUserForm');
 
 Route::post('/registerUser', [UserController::class, 'saveItem'])->name('registerUser');
-Route::get('/logout', [UserController::class, 'logout']);
+Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 
-Route::get('/login', [UserController::class, 'login']);
-Route::post('/login', [UserController::class, 'attemptLogin'])->name('loginUser');;
+Route::get('/login', [UserController::class, 'login'])->name('getLoginUrl');
+Route::post('/login', [UserController::class, 'attemptLogin'])->name('loginUser');
 
 
 //issues
-Route::get('/issues', [IssueIntakeController::class, 'getOverview']);
+Route::get('/issues', [IssueIntakeController::class, 'getOverview'])->name('showIssues');
 Route::get('/issueDetail/{id}', [IssueIntakeController::class, 'issueDetail']);
 
 Route::post('/saveIssueIntake', [IssueIntakeController::class, 'saveItem'])->name('saveIssueIntake');

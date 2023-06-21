@@ -1,14 +1,14 @@
 <div class="container">
     <header>
-        <h1>Issue Tracker Proof of Concept</h1>
+        <h1>Issue Tracker Proof of Concept (test deploy)</h1>
         <nav>
-            <a href="/">HOME</a>
+            <a href="./">HOME</a>
             @if (Session::has('logged_in_user'))
-                <a href="/issues">ISSUES</a>
-                <a href="/logout">LOGOUT</a>
+                <a href="{{ route('showIssues') }}">ISSUES</a>
+                <a href="{{ route('logout') }}">LOGOUT</a>
             @else
-                <a href="/login">LOGIN</a>
-                <a href="registerUser" class="button">CREATE AN ACCOUNT</a>
+                <a href="{{ route('getLoginUrl') }}">LOGIN</a>
+                <a href="{{ route('getRegisterUserForm') }}" class="button">CREATE AN ACCOUNT</a>
             @endif
         </nav>
     </header>
