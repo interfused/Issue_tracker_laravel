@@ -1,8 +1,8 @@
 <div class="container">
     <header>
-        <h1>Issue Tracker Proof of Concept (test deploy 5)</h1>
+        <h1>Issue Tracker Proof of Concept (test deploy 6)</h1>
         <nav>
-            <a href="./">HOME</a>
+            <a href="{{ route('getHomeUrl') }}">HOME</a>
             @if (Session::has('logged_in_user'))
                 <a href="{{ route('showIssues') }}">ISSUES</a>
                 <a href="{{ route('logout') }}">LOGOUT</a>

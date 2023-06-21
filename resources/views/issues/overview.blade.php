@@ -55,7 +55,7 @@
                                 <dd>{{ $issue['created_at']->diffForHumans() }}</dd>
                             </dl>
 
-                            <a href="/issueDetail/{{ $issue['id'] }}" class="btn btn-primary">View</a>
+                            <a href="{{ route('issueDetail', $issue['id']) }}" class="btn btn-primary">View</a>
 
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                         <dd></dd>
                     </dl>
 
-                    <a href="/issueDetail/{{ $issue['id'] }}" class="btn btn-primary">View</a>
+                    <a href="{{ route('issueDetail', $issue['id']) }}" class="btn btn-primary">View</a>
 
                 </div>
             </div>

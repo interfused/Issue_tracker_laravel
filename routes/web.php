@@ -19,7 +19,7 @@ use App\Http\Controllers\WelcomeController;
 |
 */
 
-Route::get('/', [WelcomeController::class, 'getItem']);
+Route::get('/', [WelcomeController::class, 'getItem'])->name('getHomeUrl');
 
 
 //various users
@@ -34,7 +34,7 @@ Route::post('/login', [UserController::class, 'attemptLogin'])->name('loginUser'
 
 //issues
 Route::get('/issues', [IssueIntakeController::class, 'getOverview'])->name('showIssues');
-Route::get('/issueDetail/{id}', [IssueIntakeController::class, 'issueDetail']);
+Route::get('/issueDetail/{id}', [IssueIntakeController::class, 'issueDetail'])->name('issueDetail');
 
 Route::post('/saveIssueIntake', [IssueIntakeController::class, 'saveItem'])->name('saveIssueIntake');
 

@@ -12,7 +12,7 @@
     @if (Session::has('attempt_login'))
         @if (!Session::has('logged_in_user'))
             <div class="alert alert-danger">
-                User not found. <a href="/registerUser">Create an account</a>
+                User not found. <a href="{{ route('getRegisterUserForm') }}">Create an account</a>
             </div>
         @endif
     @endif
