@@ -28,7 +28,7 @@
             foreach ($mappings as $el) {
                 echo '<div class="form-group">';
                 echo '<label for="' . $el['inputName'] . '">' . $el['label'] . '</label>';
-                echo '<input type="text" name="' . $el['inputName'] . '" class="form-control" />';
+                echo '<input type="text" name="' . $el['inputName'] . '" class="form-control" required />';
                 echo '</div>';
             }
             ?>
